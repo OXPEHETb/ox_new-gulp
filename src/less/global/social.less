@@ -1,0 +1,40 @@
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__link {
+	    font-weight: 100;
+	    font-size: 1.35rem;
+	    margin: 0 .5rem;
+	    width: 3rem;
+	    height: 3rem;
+	    padding: 1rem;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    border-radius: 1000px;
+	    background: darken(@wht, 15%);
+	    border: 1px solid darken(@wht, 15%);
+	    color: @blk;
+	    box-shadow: 0 0 1px -5px darken(@wht, 35%);
+	    transition: all 250ms ease-in;
+	    text-decoration: none;
+	    &:hover {
+		    color: @blk;
+		    background: @wht;
+		    text-decoration: none;
+		    box-shadow: 0 0 1px 15px transparent;
+		}
+		&:active, &:focus, &:visited {
+		    background: darken(@wht, 15%);
+		    color: @blk;
+		    box-shadow: 0 0 1px -5px darken(@wht, 35%);
+		    &:hover {
+		    	color: @blk;
+			    background: @wht;
+			    text-decoration: none;
+			    box-shadow: 0 0 1px 15px transparent;
+		    }
+		}
+	}
+}

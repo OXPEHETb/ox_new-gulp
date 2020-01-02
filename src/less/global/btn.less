@@ -1,0 +1,78 @@
+.btn {
+	cursor: pointer;
+	border-radius: 1000px;
+	padding: 0.25rem 1rem;
+	text-align: center;
+	font-size: 1.2rem;
+  	font-weight: 300;
+  	text-decoration: none;
+  	display: inline-block;
+  	border: 0px solid transparent;
+	&:focus {
+		box-shadow: 0px 0px transparent;
+	}
+	&-lg {
+		@pd: 2.75rem;
+		padding-left: @pd;
+		padding-right: @pd;
+	}
+	&-danger {
+		background: fade(@blk, 35%);
+		border: 1px solid @wht;
+		color: @wht;
+		.trans250();
+		&:hover {
+			color: @wht;
+			background: fade(@blk, 65%);
+		}
+		&:active, &:focus {
+			background: fade(@blk, 35%);
+			border: 1px solid @wht;
+			color: @wht;
+			&:hover {
+				color: @wht;
+				background: fade(@blk, 65%);
+			}
+		}
+	}
+
+	&-success {
+		background: @s-cl;
+		border: 1px solid darken(@s-cl, 15%);
+		color: @wht;
+		&:hover {
+	  		background: darken(@s-cl, 10%);
+	  		border: 1px solid darken(@s-cl, 25%);
+		}
+		&:active, &:focus {
+	 		background: @s-cl;
+	  		border: 1px solid darken(@s-cl, 15%);
+	  		color: @wht;
+	      	&:hover {
+	        	color: @wht;
+	        	background: darken(@s-cl, 10%);
+	        	border: 1px solid darken(@s-cl, 25%);
+	      	}
+		}
+	}
+
+	&-primary {
+		background: @mn-cl;
+		color: @wht;
+		text-transform: uppercase;
+		.trans250();
+		padding: 0.65rem 2rem;
+		&:hover {
+			background: @mn-cl;
+			color: @wht;
+		}
+		&:active, &:focus {
+			background: @mn-cl;
+			color: @wht;
+			&:hover {
+				background: @mn-cl;
+				color: @wht;
+			}
+		}
+	}
+}

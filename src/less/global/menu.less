@@ -1,0 +1,23 @@
+.menu {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	@media (max-width: 767px) {
+		flex-direction: column;
+	}
+	li {
+		a {
+			display: block;
+			text-decoration: none;
+			color: @txt;
+			padding: 0.5rem 1rem;
+			.trans250();
+			text-align: center;
+			&:hover {
+				color: @mn-cl;
+			}
+		}
+	}
+}

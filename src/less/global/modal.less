@@ -1,0 +1,47 @@
+.modal {
+	position: fixed;
+	z-index: 10000;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: fade(@blk, 75%);
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: none;
+    &-container {
+    	max-width: 450px;
+    	background: @wht;
+    	padding: 1rem;
+    	border: 1px solid darken(@wht, 15%);
+    	margin: 5vh auto;
+		@media (max-width: 767px) {
+            width: calc(~'100% - 20px');
+        }
+    }
+	&-big {
+        max-width: 750px;            
+    }
+    &-header {
+    	position: relative;
+    	&-title {
+    		font-size: 1.5rem;
+    		margin-bottom: 1rem;
+    	}
+    	.close {
+    		position: absolute;
+    		top: -0.5rem;
+    		right: -0.5rem;
+    		font-size: 1.5rem;
+    		opacity: 0.55;
+    		.trans250();
+    		cursor: pointer;
+    		&:hover {
+    			opacity: 1;
+    		}
+    	}
+    }
+}
+.ovfh {
+	overflow: hidden;
+}
